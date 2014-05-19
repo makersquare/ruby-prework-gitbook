@@ -4,7 +4,7 @@ A class is a collection of attributes and methods that describe the behavior of 
 
 ```ruby
 :address    # Symbol
-"Ruby!"     # String
+"Ruby!"     # Strings
 1985        # Fixnum
 3.14        # Float
 [1,2,3]     # Array
