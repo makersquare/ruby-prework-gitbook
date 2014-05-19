@@ -1,0 +1,563 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Hash Methods | Learn Ruby</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="This book will teach you the basics of Ruby in order to get you prepared for your first day at MakerSquare. From day one you will be introduced to Test Driven Development and you will learn how to properly architect a Ruby application. Because of this it is imperative that you have a solid understanding of Ruby fundamentals.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./classes.html" />
+        
+        
+        <link rel="prev" href="./nested-hashes.html" />
+        
+
+        <meta property="og:title" content="Hash Methods | Learn Ruby">
+        <meta property="og:site_name" content="Learn Ruby">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="4.7" data-basepath="." data-revision="1400260044796">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Learn Ruby</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="about-prework.html">
+                
+                <a href="./about-prework.html">
+                    <i class="fa fa-check"></i> <b>1.</b> The Beginning
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="tools.html">
+                            
+                            <a href="./tools.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Tools
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="what-is-ruby.html">
+                            
+                            <a href="./what-is-ruby.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> What is Ruby?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="ruby-prework-goals.html">
+                            
+                            <a href="./ruby-prework-goals.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Ruby Prework Goals
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="the-checklist.html">
+                            
+                            <a href="./the-checklist.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> The Checklist
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="conventions.html">
+                            
+                            <a href="./conventions.html">
+                                <i class="fa fa-check"></i> <b>1.5.</b> Conventions
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="basics.html">
+                
+                <a href="./basics.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Basics
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="comments.html">
+                            
+                            <a href="./comments.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Comments
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="methods.html">
+                            
+                            <a href="./methods.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Methods
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="variables.html">
+                            
+                            <a href="./variables.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Variables
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="equality.html">
+                            
+                            <a href="./equality.html">
+                                <i class="fa fa-check"></i> <b>2.4.</b> Equality
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="data-types-structures.html">
+                
+                <a href="./data-types-structures.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Data Types
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="numbers.html">
+                            
+                            <a href="./numbers.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> Numbers
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="strings.html">
+                            
+                            <a href="./strings.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Strings
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="symbols.html">
+                            
+                            <a href="./symbols.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> Symbols
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="data-structures.html">
+                
+                <a href="./data-structures.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Data Structures
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="arrays.html">
+                            
+                            <a href="./arrays.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> Arrays
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="working-with-arrays.html">
+                            
+                            <a href="./working-with-arrays.html">
+                                <i class="fa fa-check"></i> <b>4.2.</b> Working with Arrays
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="array-methods.html">
+                            
+                            <a href="./array-methods.html">
+                                <i class="fa fa-check"></i> <b>4.3.</b> Array Methods
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="hashes.html">
+                            
+                            <a href="./hashes.html">
+                                <i class="fa fa-check"></i> <b>4.4.</b> Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="working-with-hashes.html">
+                            
+                            <a href="./working-with-hashes.html">
+                                <i class="fa fa-check"></i> <b>4.5.</b> Working with Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="nested-hashes.html">
+                            
+                            <a href="./nested-hashes.html">
+                                <i class="fa fa-check"></i> <b>4.6.</b> Nested Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="hash-methods.html">
+                            
+                            <a href="./hash-methods.html">
+                                <i class="fa fa-check"></i> <b>4.7.</b> Hash Methods
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="classes.html">
+                
+                <a href="./classes.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Classes
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="what-is-a-class.html">
+                            
+                            <a href="./what-is-a-class.html">
+                                <i class="fa fa-check"></i> <b>5.1.</b> What is a Class?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="class-constructor.html">
+                            
+                            <a href="./class-constructor.html">
+                                <i class="fa fa-check"></i> <b>5.2.</b> The &#39;class&#39; Constructor
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="instance-variables.html">
+                            
+                            <a href="./instance-variables.html">
+                                <i class="fa fa-check"></i> <b>5.3.</b> Instance Variables
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="class-variables.html">
+                            
+                            <a href="./class-variables.html">
+                                <i class="fa fa-check"></i> <b>5.4.</b> Class Variables
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="conditionals.html">
+                
+                <a href="./conditionals.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Conditionals
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="if-expressions.html">
+                            
+                            <a href="./if-expressions.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> if Expressions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="case-expressions.html">
+                            
+                            <a href="./case-expressions.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> case Expressions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="unless-statements.html">
+                            
+                            <a href="./unless-statements.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> unless Statements
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="reference.html">
+                
+                <a href="./reference.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Reference
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="operators.html">
+                            
+                            <a href="./operators.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> Operators
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" >
+                
+                <span><b>8.</b> Loops &amp; Iterators</span>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 67.6470588235294%;min-width: 64.70588235294117%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./about-prework.html" title="The Beginning" class="chapter done new-chapter" data-progress="1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="./tools.html" title="Tools" class="chapter done " data-progress="1.1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="./what-is-ruby.html" title="What is Ruby?" class="chapter done " data-progress="1.2" style="left: 8.823529411764707%;"></a>
+    
+        <a href="./ruby-prework-goals.html" title="Ruby Prework Goals" class="chapter done " data-progress="1.3" style="left: 11.764705882352942%;"></a>
+    
+        <a href="./the-checklist.html" title="The Checklist" class="chapter done " data-progress="1.4" style="left: 14.705882352941176%;"></a>
+    
+        <a href="./conventions.html" title="Conventions" class="chapter done " data-progress="1.5" style="left: 17.647058823529413%;"></a>
+    
+        <a href="./basics.html" title="Basics" class="chapter done new-chapter" data-progress="2" style="left: 20.58823529411765%;"></a>
+    
+        <a href="./comments.html" title="Comments" class="chapter done " data-progress="2.1" style="left: 23.529411764705884%;"></a>
+    
+        <a href="./methods.html" title="Methods" class="chapter done " data-progress="2.2" style="left: 26.470588235294116%;"></a>
+    
+        <a href="./variables.html" title="Variables" class="chapter done " data-progress="2.3" style="left: 29.41176470588235%;"></a>
+    
+        <a href="./equality.html" title="Equality" class="chapter done " data-progress="2.4" style="left: 32.35294117647059%;"></a>
+    
+        <a href="./data-types-structures.html" title="Data Types" class="chapter done new-chapter" data-progress="3" style="left: 35.294117647058826%;"></a>
+    
+        <a href="./numbers.html" title="Numbers" class="chapter done " data-progress="3.1" style="left: 38.23529411764706%;"></a>
+    
+        <a href="./strings.html" title="Strings" class="chapter done " data-progress="3.2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="./symbols.html" title="Symbols" class="chapter done " data-progress="3.3" style="left: 44.11764705882353%;"></a>
+    
+        <a href="./data-structures.html" title="Data Structures" class="chapter done new-chapter" data-progress="4" style="left: 47.05882352941177%;"></a>
+    
+        <a href="./arrays.html" title="Arrays" class="chapter done " data-progress="4.1" style="left: 50%;"></a>
+    
+        <a href="./working-with-arrays.html" title="Working with Arrays" class="chapter done " data-progress="4.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="./array-methods.html" title="Array Methods" class="chapter done " data-progress="4.3" style="left: 55.88235294117647%;"></a>
+    
+        <a href="./hashes.html" title="Hashes" class="chapter done " data-progress="4.4" style="left: 58.8235294117647%;"></a>
+    
+        <a href="./working-with-hashes.html" title="Working with Hashes" class="chapter done " data-progress="4.5" style="left: 61.76470588235294%;"></a>
+    
+        <a href="./nested-hashes.html" title="Nested Hashes" class="chapter done " data-progress="4.6" style="left: 64.70588235294117%;"></a>
+    
+        <a href="./hash-methods.html" title="Hash Methods" class="chapter done " data-progress="4.7" style="left: 67.6470588235294%;"></a>
+    
+        <a href="./classes.html" title="Classes" class="chapter  new-chapter" data-progress="5" style="left: 70.58823529411765%;"></a>
+    
+        <a href="./what-is-a-class.html" title="What is a Class?" class="chapter  " data-progress="5.1" style="left: 73.52941176470588%;"></a>
+    
+        <a href="./class-constructor.html" title="The &#39;class&#39; Constructor" class="chapter  " data-progress="5.2" style="left: 76.47058823529412%;"></a>
+    
+        <a href="./instance-variables.html" title="Instance Variables" class="chapter  " data-progress="5.3" style="left: 79.41176470588235%;"></a>
+    
+        <a href="./class-variables.html" title="Class Variables" class="chapter  " data-progress="5.4" style="left: 82.3529411764706%;"></a>
+    
+        <a href="./conditionals.html" title="Conditionals" class="chapter  new-chapter" data-progress="6" style="left: 85.29411764705883%;"></a>
+    
+        <a href="./if-expressions.html" title="if Expressions" class="chapter  " data-progress="6.1" style="left: 88.23529411764706%;"></a>
+    
+        <a href="./case-expressions.html" title="case Expressions" class="chapter  " data-progress="6.2" style="left: 91.17647058823529%;"></a>
+    
+        <a href="./unless-statements.html" title="unless Statements" class="chapter  " data-progress="6.3" style="left: 94.11764705882354%;"></a>
+    
+        <a href="./reference.html" title="Reference" class="chapter  new-chapter" data-progress="7" style="left: 97.05882352941177%;"></a>
+    
+        <a href="./operators.html" title="Operators" class="chapter  " data-progress="7.1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_5315">
+                    
+                        <h1 id="hash-methods">Hash Methods</h1>
+<p>We&#39;ve already learned that you can use square brackets, with a key inside, to access values in a hash. If the key you entered doesn&#39;t exist the interpreter will return <code>nil</code>. This can be a problem if you are trying to capture that value and save it to a variable for use later because your variable will be set to <code>nil</code>. Fortunately, Ruby allows us to inspect a hash to see if it has the key we are looking for.</p>
+<pre><code class="lang-ruby">ages = {
+  <span class="hljs-string">"nick"</span> =&gt; <span class="hljs-number">28</span>,
+  <span class="hljs-string">"kate"</span> =&gt; <span class="hljs-number">23</span>,
+  <span class="hljs-string">"atlas"</span> =&gt; <span class="hljs-number">3</span>,
+  <span class="hljs-string">"maple"</span> =&gt; <span class="hljs-number">4</span>
+}
+
+ages.has_key?(<span class="hljs-string">"nick"</span>)  <span class="hljs-comment">#=&gt; true</span>
+ages.has_key?(<span class="hljs-string">"bob"</span>)   <span class="hljs-comment">#=&gt; false</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./nested-hashes.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./classes.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

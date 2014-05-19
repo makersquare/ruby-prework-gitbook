@@ -1,0 +1,779 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Data Types | Learn Ruby</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="This book will teach you the basics of Ruby in order to get you prepared for your first day at MakerSquare. From day one you will be introduced to Test Driven Development and you will learn how to properly architect a Ruby application. Because of this it is imperative that you have a solid understanding of Ruby fundamentals.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./numbers.html" />
+        
+        
+        <link rel="prev" href="./equality.html" />
+        
+
+        <meta property="og:title" content="Data Types | Learn Ruby">
+        <meta property="og:site_name" content="Learn Ruby">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="3" data-basepath="." data-revision="1400260044796">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Learn Ruby</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="about-prework.html">
+                
+                <a href="./about-prework.html">
+                    <i class="fa fa-check"></i> <b>1.</b> The Beginning
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="tools.html">
+                            
+                            <a href="./tools.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Tools
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="what-is-ruby.html">
+                            
+                            <a href="./what-is-ruby.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> What is Ruby?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="ruby-prework-goals.html">
+                            
+                            <a href="./ruby-prework-goals.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Ruby Prework Goals
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="the-checklist.html">
+                            
+                            <a href="./the-checklist.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> The Checklist
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="conventions.html">
+                            
+                            <a href="./conventions.html">
+                                <i class="fa fa-check"></i> <b>1.5.</b> Conventions
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="basics.html">
+                
+                <a href="./basics.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Basics
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="comments.html">
+                            
+                            <a href="./comments.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Comments
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="methods.html">
+                            
+                            <a href="./methods.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Methods
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="variables.html">
+                            
+                            <a href="./variables.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Variables
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="equality.html">
+                            
+                            <a href="./equality.html">
+                                <i class="fa fa-check"></i> <b>2.4.</b> Equality
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="data-types-structures.html">
+                
+                <a href="./data-types-structures.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Data Types
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="numbers.html">
+                            
+                            <a href="./numbers.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> Numbers
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="strings.html">
+                            
+                            <a href="./strings.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Strings
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="symbols.html">
+                            
+                            <a href="./symbols.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> Symbols
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="data-structures.html">
+                
+                <a href="./data-structures.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Data Structures
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="arrays.html">
+                            
+                            <a href="./arrays.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> Arrays
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="working-with-arrays.html">
+                            
+                            <a href="./working-with-arrays.html">
+                                <i class="fa fa-check"></i> <b>4.2.</b> Working with Arrays
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="array-methods.html">
+                            
+                            <a href="./array-methods.html">
+                                <i class="fa fa-check"></i> <b>4.3.</b> Array Methods
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="hashes.html">
+                            
+                            <a href="./hashes.html">
+                                <i class="fa fa-check"></i> <b>4.4.</b> Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="working-with-hashes.html">
+                            
+                            <a href="./working-with-hashes.html">
+                                <i class="fa fa-check"></i> <b>4.5.</b> Working with Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="nested-hashes.html">
+                            
+                            <a href="./nested-hashes.html">
+                                <i class="fa fa-check"></i> <b>4.6.</b> Nested Hashes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="hash-methods.html">
+                            
+                            <a href="./hash-methods.html">
+                                <i class="fa fa-check"></i> <b>4.7.</b> Hash Methods
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="classes.html">
+                
+                <a href="./classes.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Classes
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="what-is-a-class.html">
+                            
+                            <a href="./what-is-a-class.html">
+                                <i class="fa fa-check"></i> <b>5.1.</b> What is a Class?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="class-constructor.html">
+                            
+                            <a href="./class-constructor.html">
+                                <i class="fa fa-check"></i> <b>5.2.</b> The &#39;class&#39; Constructor
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="instance-variables.html">
+                            
+                            <a href="./instance-variables.html">
+                                <i class="fa fa-check"></i> <b>5.3.</b> Instance Variables
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="class-variables.html">
+                            
+                            <a href="./class-variables.html">
+                                <i class="fa fa-check"></i> <b>5.4.</b> Class Variables
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="conditionals.html">
+                
+                <a href="./conditionals.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Conditionals
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="if-expressions.html">
+                            
+                            <a href="./if-expressions.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> if Expressions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="case-expressions.html">
+                            
+                            <a href="./case-expressions.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> case Expressions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="unless-statements.html">
+                            
+                            <a href="./unless-statements.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> unless Statements
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="reference.html">
+                
+                <a href="./reference.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Reference
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="operators.html">
+                            
+                            <a href="./operators.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> Operators
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" >
+                
+                <span><b>8.</b> Loops &amp; Iterators</span>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 35.294117647058826%;min-width: 32.35294117647059%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./about-prework.html" title="The Beginning" class="chapter done new-chapter" data-progress="1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="./tools.html" title="Tools" class="chapter done " data-progress="1.1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="./what-is-ruby.html" title="What is Ruby?" class="chapter done " data-progress="1.2" style="left: 8.823529411764707%;"></a>
+    
+        <a href="./ruby-prework-goals.html" title="Ruby Prework Goals" class="chapter done " data-progress="1.3" style="left: 11.764705882352942%;"></a>
+    
+        <a href="./the-checklist.html" title="The Checklist" class="chapter done " data-progress="1.4" style="left: 14.705882352941176%;"></a>
+    
+        <a href="./conventions.html" title="Conventions" class="chapter done " data-progress="1.5" style="left: 17.647058823529413%;"></a>
+    
+        <a href="./basics.html" title="Basics" class="chapter done new-chapter" data-progress="2" style="left: 20.58823529411765%;"></a>
+    
+        <a href="./comments.html" title="Comments" class="chapter done " data-progress="2.1" style="left: 23.529411764705884%;"></a>
+    
+        <a href="./methods.html" title="Methods" class="chapter done " data-progress="2.2" style="left: 26.470588235294116%;"></a>
+    
+        <a href="./variables.html" title="Variables" class="chapter done " data-progress="2.3" style="left: 29.41176470588235%;"></a>
+    
+        <a href="./equality.html" title="Equality" class="chapter done " data-progress="2.4" style="left: 32.35294117647059%;"></a>
+    
+        <a href="./data-types-structures.html" title="Data Types" class="chapter done new-chapter" data-progress="3" style="left: 35.294117647058826%;"></a>
+    
+        <a href="./numbers.html" title="Numbers" class="chapter  " data-progress="3.1" style="left: 38.23529411764706%;"></a>
+    
+        <a href="./strings.html" title="Strings" class="chapter  " data-progress="3.2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="./symbols.html" title="Symbols" class="chapter  " data-progress="3.3" style="left: 44.11764705882353%;"></a>
+    
+        <a href="./data-structures.html" title="Data Structures" class="chapter  new-chapter" data-progress="4" style="left: 47.05882352941177%;"></a>
+    
+        <a href="./arrays.html" title="Arrays" class="chapter  " data-progress="4.1" style="left: 50%;"></a>
+    
+        <a href="./working-with-arrays.html" title="Working with Arrays" class="chapter  " data-progress="4.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="./array-methods.html" title="Array Methods" class="chapter  " data-progress="4.3" style="left: 55.88235294117647%;"></a>
+    
+        <a href="./hashes.html" title="Hashes" class="chapter  " data-progress="4.4" style="left: 58.8235294117647%;"></a>
+    
+        <a href="./working-with-hashes.html" title="Working with Hashes" class="chapter  " data-progress="4.5" style="left: 61.76470588235294%;"></a>
+    
+        <a href="./nested-hashes.html" title="Nested Hashes" class="chapter  " data-progress="4.6" style="left: 64.70588235294117%;"></a>
+    
+        <a href="./hash-methods.html" title="Hash Methods" class="chapter  " data-progress="4.7" style="left: 67.6470588235294%;"></a>
+    
+        <a href="./classes.html" title="Classes" class="chapter  new-chapter" data-progress="5" style="left: 70.58823529411765%;"></a>
+    
+        <a href="./what-is-a-class.html" title="What is a Class?" class="chapter  " data-progress="5.1" style="left: 73.52941176470588%;"></a>
+    
+        <a href="./class-constructor.html" title="The &#39;class&#39; Constructor" class="chapter  " data-progress="5.2" style="left: 76.47058823529412%;"></a>
+    
+        <a href="./instance-variables.html" title="Instance Variables" class="chapter  " data-progress="5.3" style="left: 79.41176470588235%;"></a>
+    
+        <a href="./class-variables.html" title="Class Variables" class="chapter  " data-progress="5.4" style="left: 82.3529411764706%;"></a>
+    
+        <a href="./conditionals.html" title="Conditionals" class="chapter  new-chapter" data-progress="6" style="left: 85.29411764705883%;"></a>
+    
+        <a href="./if-expressions.html" title="if Expressions" class="chapter  " data-progress="6.1" style="left: 88.23529411764706%;"></a>
+    
+        <a href="./case-expressions.html" title="case Expressions" class="chapter  " data-progress="6.2" style="left: 91.17647058823529%;"></a>
+    
+        <a href="./unless-statements.html" title="unless Statements" class="chapter  " data-progress="6.3" style="left: 94.11764705882354%;"></a>
+    
+        <a href="./reference.html" title="Reference" class="chapter  new-chapter" data-progress="7" style="left: 97.05882352941177%;"></a>
+    
+        <a href="./operators.html" title="Operators" class="chapter  " data-progress="7.1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_5303">
+                    
+                        <h1 id="data-types">Data Types</h1>
+<p>The goal of this lesson is to review the various Ruby data types and data structures. You are likely already familiar with a lot of this and so much of it may be review. We will also be introduced to the Interactive Ruby Shell. IRB, as it is known, is an interactive environment in your terminal where you can evaluate Ruby code. You should already have IRB installed; if you do not go to <a href="https://www.ruby-lang.org/en/downloads/" target="_blank">ruby-lang.org</a>. You can check if you have IRB installed by simply typing <code>irb</code> into your terminal.</p>
+<pre><code class="lang-console">irb
+</code></pre>
+<hr>
+<p>IRB is a REPL for Ruby code. REPL stands for Read, Evaluate, Print, Loop. What a REPL does is spelled out rather succintly in its name: it Reads a line of input from the user, it Evaluates that line, it Prints the result of the evaluation, and then it Loops back to waiting for more user input. Many languages have REPLs and IRB is one of the most commonly used ones for evaluating Ruby code.</p>
+<p>Let&#39;s open up IRB and try out a few things.</p>
+<pre><code class="lang-ruby"><span class="hljs-number">5</span>+<span class="hljs-number">9</span>
+<span class="hljs-string">'lol'</span>.upcase
+[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>].map { |x| x * <span class="hljs-number">5</span> }
+[<span class="hljs-string">"Nick"</span>, <span class="hljs-string">"Patrick"</span>, <span class="hljs-string">"Alex"</span>, <span class="hljs-string">"Mike"</span>].each <span class="hljs-keyword">do</span> |person|
+  puts person
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>A quick note on conventions used in this lesson:
+If you see a comment hash followed by a hashrocket everything to the right of the hashrocket is presumed to be the output of that line of code.</p>
+<pre><code class="lang-ruby"><span class="hljs-number">5</span>+<span class="hljs-number">9</span>          <span class="hljs-comment">#=&gt; 14</span>
+<span class="hljs-string">"lol"</span>.upcase <span class="hljs-comment">#=&gt; "LOL"</span>
+</code></pre>
+<hr>
+<h2 id="data-types">Data Types</h2>
+<p>Let&#39;s have a look at the simplest method you typed into IRB to see how it really works.</p>
+<pre><code class="lang-ruby"><span class="hljs-number">5</span>+<span class="hljs-number">9</span>
+</code></pre>
+<p>Of course we all know this evaluates to 14 and that is not particularly interesting. What is interesting is that we have seen in the two other methods typed into IRB that Ruby methods are typically called with <code>.method</code> syntax. If I told you that <code>+</code> was a method itself how else might we be able to call it? Try this:</p>
+<pre><code class="lang-ruby"><span class="hljs-number">5</span>.+(<span class="hljs-number">9</span>)
+</code></pre>
+<p>This behavior gives away something fundamental about the way Ruby works. In Ruby everything is an object. What this means is that each object carries with it a collection of methods that it can use to produce new values. In the case of <code>5.+(9)</code> we can infer that the object <code>5</code> contains a method <code>+</code> that takes another object as an argument and adds it to <code>5</code>. However, <code>5</code> wont take just any object; it wont take the string &quot;hello&quot; for instance. Try this in IRB:</p>
+<pre><code class="lang-ruby"><span class="hljs-number">5</span> + <span class="hljs-string">"hello"</span>
+</code></pre>
+<p>You should see an error that says <code>TypeError: String can&#39;t be coerced into Fixnum</code>. You can ignore the rest of the error for now; we will go over debugging in a later lesson. What the beginning of this error is telling us is that the String we passed, <code>&quot;hello&quot;</code>, cannot be added to the object <code>5</code> because it was expecting something called a <code>Fixnum</code>. What is a <code>Fixnum</code>?</p>
+<hr>
+<h2 id="numbers-in-ruby">Numbers in Ruby</h2>
+<p>Every programming language accounts for various data types. In all programming languages numbers fall into at least two data types: integers &amp; floats. In Ruby integers like 0, 5, -53, and 31337 are all instances of the <code>Fixnum</code> class. The <code>Fixnum</code> class is where the method <code>+</code> resides. Beause <code>5</code> is a <code>Fixnum</code> object we can call <code>+</code> on it.</p>
+<p>What other methods do you think you can use on the <code>Fixnum</code> class? Let&#39;s explore a couple others. We&#39;ll start with multiplication because it works pretty much as you&#39;d expect it to. Type the following into IRB:</p>
+<pre><code class="lang-ruby"><span class="hljs-number">2</span>*<span class="hljs-number">3</span>*<span class="hljs-number">4</span>
+<span class="hljs-number">2</span>*<span class="hljs-number">3</span>*<span class="hljs-number">4.0</span>
+</code></pre>
+<p>You&#39;ll notice that you received the same answer for both but with slightly different levels of precision. It may seem obvious but it is worth noting that <code>24</code> is in fact equal to <code>24.0</code> even though they look different (one is an instance of the <code>Fixnum</code> class while the other is an instance of <code>Float</code>). Let&#39;s have a look at the affect of this behavior when using the division method:</p>
+<pre><code class="lang-ruby"><span class="hljs-number">7</span>/<span class="hljs-number">2</span>
+<span class="hljs-number">7</span>/<span class="hljs-number">2.0</span>
+</code></pre>
+<p>Now this is very different. In our heads it is easy to understand that seven divided by two is actually <code>3.5</code> but Ruby didn&#39;t get that. That is because if you pass two <code>Fixnum</code>s to the division method, <code>/</code>, it will return a value that is also a <code>Fixnum</code>. However, if you pass it a <code>Fixnum</code> and a <code>Float</code>, it will divide with more precision and provide the value you expected.</p>
+<p>The last mathematical operator I&#39;d like to look at is called the <em>modulo</em> operator. It is represented by the <code>%</code> character. Type the following into IRB:</p>
+<pre><code class="lang-ruby"><span class="hljs-number">5</span> % <span class="hljs-number">2</span>
+<span class="hljs-number">9</span> % <span class="hljs-number">7</span>
+<span class="hljs-number">8</span> % <span class="hljs-number">5</span>
+<span class="hljs-number">10</span> % <span class="hljs-number">2</span>
+</code></pre>
+<p>This behavior may seem a little odd at first but it is in fact very simple. The <code>%</code> operator divides the left number by the right number and returns the remainder. In the case of  <code>5 % 2</code> the number 2 is divided evenly into the number 5 two times and has a remainder of 1. In the case of <code>10 % 2</code> the number 10 can be divided by 2 evenly five times with a remainder of 0. This works with floats as well. Try <code>5.5 % 2</code> in IRB.</p>
+<p>Note:
+There are other classes than <code>Fixnum</code> and <code>Float</code> that different types of number are instances of. Fractions like <code>(5/3)</code> belong to a class called <code>Rational</code> and complex numbers belong to... you guessed it: the <code>Complex</code> class.</p>
+<p>The Ruby prework will only be concerned with the <code>Integer</code>s and <code>Float</code>s so if the other two confused you don&#39;t worry about it. If you&#39;d like to know more about all of these classes check out the official Ruby documentation on the class all of these classes belong to. It&#39;s called <code>Numeric</code>. <a href="http://www.ruby-doc.org/core-2.1.1/Numeric.html" target="_blank">Click here</a>. See the end of the lesson for a closer look at the Ruby object model. It explains the hierarchy of all these different classes in more detail.</p>
+<hr>
+<h2 id="strings">Strings</h2>
+<p>By now you&#39;ve certainly see plenty of strings in Ruby and so we&#39;ll keep this section brief. Strings can be denoted in a variety of different ways but the two main ones with which you&#39;ll be mostly concerned are double quoted and single quoted strings.</p>
+<pre><code class="lang-ruby"><span class="hljs-string">'MakerSquare!'</span> <span class="hljs-comment">#=&gt; Single quoted string</span>
+<span class="hljs-string">"MakerSquare!"</span> <span class="hljs-comment">#=&gt; Double quoted string</span>
+</code></pre>
+<p>You may be confused as to when you should use double quoted vs single quoted strings. I&#39;ll explain the benefits of both and you can decide which one is better for your particular use case.</p>
+<p>Double quoted strings allow you to do and not do certain thing that may be advantageous to you. The first, and most common, reason to use double quotes for strings is to use something called <em>string interpolation</em>. String interpolation is the use of a Ruby expression inside a string. Try this in IRB:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"Five plus two is <span class="hljs-subst">#{<span class="hljs-number">5</span>+<span class="hljs-number">2</span>}</span>"</span>
+</code></pre>
+<p>You&#39;ll see that we put the expression <code>5+2</code> inside of <code>#{}</code> and it was evaluated and added to the string. That is how string interpolation works. You put just about any expression inside of a string so long as the result of the expression can have <code>.to_s</code> called on it. <code>.to_s</code> simply converts a Ruby object from whatever it is into a string.</p>
+<p>Another time you may want to use a double quoted string is for a string like this:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"I loved Nick's comments on 'integers' and 'floats!'"</span>
+</code></pre>
+<p>Here we used single quotes as part of the string we wanted to print. If you do not use double quotes for strings that have single quotes as part of the string you have to do this:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'I loved Nick\'s comments on \'integers\' and \'floats!\''</span>
+</code></pre>
+<p>The backslashes are called escape characters. They tell the Ruby interprester that the next character is not part of the program code but actually part of the string itself. This is a perfectly valid thing to do and some people dont mind it. I think it&#39;s a little verbose and can make your strings funny looking.</p>
+<p>There is one very good reason to use single quoted strings any time you are not using string interpolation or single quotes within strings. Debugging. If you have many strings that interpolate and many that don&#39;t it is easier to spot and skip over the ones that don&#39;t contain any code if they are single quoted. That is a personal preference for me when dealing with large codebases. You can find a style that suits your needs best.</p>
+<p>Let&#39;s have a look at some of the commonly used methods on strings.</p>
+<pre><code class="lang-ruby"><span class="hljs-string">'lol'</span>.upcase          <span class="hljs-comment">#=&gt; "LOL"</span>
+<span class="hljs-string">'QUIET'</span>.downcase      <span class="hljs-comment">#=&gt; "quiet"</span>
+<span class="hljs-string">'austin'</span>.capitalize   <span class="hljs-comment">#=&gt; "Austin"</span>
+<span class="hljs-string">'racecar'</span>.reverse     <span class="hljs-comment">#=&gt; "racecar"</span>
+<span class="hljs-string">'MakerSquare'</span>.length  <span class="hljs-comment">#=&gt; 11</span>
+</code></pre>
+<p>These methods all do what you&#39;d expect them to do. That is the beauty of Ruby. There are many more methods that can operate on strings. What do you think happens if you try to add two strings together with <code>+</code>? Yes, <code>+</code> is a method from when we were working with numbers, however, it also is a method in the <code>String</code> class as well. Try out the following in IRB:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'I love '</span> + <span class="hljs-string">'MakerSquare!'</span>
+</code></pre>
+<p>Pretty predictable. I&#39;d like to cover one last method from the <code>String</code> class before we move on. The method is called <code>split</code> and it can take a single optional argument. Let&#39;s try it out in IRB:</p>
+<pre><code class="lang-ruby"><span class="hljs-string">'Ruby is cool'</span>.split  <span class="hljs-comment">#=&gt; ["Ruby", "is", "cool"]</span>
+</code></pre>
+<p>The split method, when called without its optional argument, will take a string, split it at each instance of white space, and then return a new array. Everything between some white space becomes it&#39;s own element in the array. You may be wondering, &quot;what&#39;s the deal with this optional argument? If it&#39;s there, what does it do?&quot; Very good question. The optional argument can be either another string or something we will discuss later called a regular expression. I think an example will best describe the behavior. Type the following into IRB:</p>
+<pre><code class="lang-ruby"><span class="hljs-string">'MakerSquarexisxcool!'</span>.split(<span class="hljs-string">'x'</span>)  <span class="hljs-comment">#=&gt; ["Ruby", "is", "cool"]</span>
+</code></pre>
+<p>You&#39;ll see that we have a weird string that looks familiar but with x&#39;s instead of spaces. Because we passed in the string &#39;x&#39; the <code>split</code> method will now split the string anywhere it finds an &#39;x&#39;. Notice that just like with the spaces the &#39;x&#39; is discarded and only the strings between the &#39;x&#39;s are kept in the array.</p>
+<p>So that brings us to arrays. What on earth is an array?</p>
+<hr>
+<h2 id="arrays">Arrays</h2>
+<p>Arrays are Ruby&#39;s most basic data structure. They essentially are heterogenous containers of data. This means you are given a ton of freedom with what you can put inside an array. A non exhaustive list of things that can go inside an array:</p>
+<ul>
+<li>strings</li>
+<li>symbols</li>
+<li>numbers</li>
+<li>other arrays</li>
+</ul>
+<p>Arrays can be created three different ways, <code>Array.new</code>, <code>[]</code>, or as the result of a method, like <code>.split</code>, that returns an array (tehcnically the first two ways are both methods that return empty arrays). The methods that operate on arrays are plentiful and some can be quite complex. Let&#39;s have a look at some of the simple ones.</p>
+<pre><code class="lang-ruby">[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>].length  <span class="hljs-comment">#=&gt; 4</span>
+[<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>].sort         <span class="hljs-comment">#=&gt; [1, 2, 3, 4, 5]</span>
+</code></pre>
+<p>Here the <code>length</code> method works similarly to the one we used earlier on a string. It counts the number of elements in the array and returns an integer value. There is another array method that mimics this behaviour: <code>size</code>. We call <code>size</code> an <em>alias</em> of <code>length</code>.</p>
+<p>The <code>sort</code> method does exactly what it sounds like. It sort&#39;s the array! What do you think happens if you try to sort an array of strings like <code>[&#39;Nick&#39;, &#39;Gilbert&#39;, &#39;Alex&#39;, &#39;Osei&#39;]</code>. Go ahead. Try it.</p>
+<p>As you can imagine, typing out arrays by hand like we just did can get pretty tiring. It&#39;s also a bit dangerous if you want to use the same data repeatedly because you could mistype something. Fortunately Ruby has a solution to this problem.</p>
+<hr>
+<h2 id="variables">Variables</h2>
+<p>So far we have been dealing with objects directly. When we&#39;ve wanted to add two numbers together we&#39;ve simply done: <code>5 + 9</code>. When we&#39;ve wanted to sort an array we&#39;ve had to type out <code>[5, 3, 1, 4, 2].sort</code>. This isn&#39;t very efficient and is prone to typos. Variables fix the problem by allowing us to give an object a name and then call methods on that name instead of the object itself. Let&#39;s try it out. Type the following in IRB:</p>
+<pre><code class="lang-ruby">my_name = <span class="hljs-string">"Nick McDonnough"</span>
+my_name
+my_name.downcase
+my_name.length
+my_coworkers = [<span class="hljs-string">"Shehzan"</span>, <span class="hljs-string">"Amanda"</span> ,<span class="hljs-string">"Mike"</span>, <span class="hljs-string">"Gilbert"</span>, <span class="hljs-string">"Gene"</span>, <span class="hljs-string">"Emily"</span>]
+my_coworkers
+my_coworkers.length
+sorted_coworkers = my_coworkers.sort
+</code></pre>
+<p>The first few seven lines are pretty trivial and do what you&#39;d expect. The string <code>&quot;Nick McDonnough&quot;</code> is saved to the variable <code>my_name</code> and then when we simply call <code>my_name</code> by typing it into IRB. As expected it returns the string <code>&quot;Nick McDonnough&quot;</code>. After you assing a value to a variable you can access that value anywhere by simply typing in the variable name.</p>
+<p>The last line of that example is very important. In Ruby you do not have to know the exact object when you decide to give it a name by saving it to a variable. You can use an expression! An expression will evaluate to an object and that object will be saved to the variable. Here <code>my_coworkers.sort</code> evaluates to the object <code>[&quot;Amanda&quot;, &quot;Emily&quot;, &quot;Gene&quot;, &quot;Gilbert&quot;, &quot;Mike&quot;, &quot;Shehzan&quot;]</code>. That object is then given the name <code>sorted_coworkers</code>.</p>
+<p>Variables can also be reassigned. Try this out in IRB:</p>
+<pre><code class="lang-ruby">name = <span class="hljs-string">"Nick"</span>
+puts name
+name = <span class="hljs-string">"Mike"</span>
+puts name
+</code></pre>
+<p>There is one caveat about doing this kind of thing. When working with even a relatively small codebase reusing variable names can get very, very, confusing. My rule of thumb is that if you want to mutate some value that is assigned to a variable you should assign the new value to a new variable.</p>
+<hr>
+<h2 id="working-with-arrays">Working With Arrays</h2>
+<p>I&#39;d like to take a closer look at the structure of arrays and how you manipulate them. I mentioned earlier that you can use <code>Array.new</code> or <code>[]</code> to create a new empty array. There&#39;s not a heck of a lot we can do with an empty array so let&#39;s put some data in it.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># First create a new array</span>
+ary = <span class="hljs-constant">Array</span>.new
+
+<span class="hljs-comment"># Now we'd like to add the name "Nick" to it</span>
+<span class="hljs-comment"># Ruby gives us a few ways to do this</span>
+ary.push(<span class="hljs-string">"Nick"</span>)  <span class="hljs-comment">#=&gt; ["Nick"]</span>
+
+<span class="hljs-comment"># Here's another way to add to an array</span>
+ary &lt;&lt; <span class="hljs-string">"is"</span>     <span class="hljs-comment">#=&gt; ["Nick", "is"]</span>
+ary &lt;&lt; <span class="hljs-string">"funny"</span>  <span class="hljs-comment">#=&gt; ["Nick", "is", "funny"]</span>
+</code></pre>
+<p>Ok, so now we know how to add elements to the end of an array. Unfortunately, I&#39;m not very funny and I don&#39;t want to lie so how can I get rid of &quot;funny&quot; from the end of <code>ary</code>? Ruby has a method called <code>pop</code> which is basically reverses the effect of <code>push</code>. It pops the last element off of the array. The return value of <code>pop</code> is the element it popped off. Let&#39;s use pop to get rid of &quot;funny&quot; and then let&#39;s add the number <code>28</code> to the end.</p>
+<pre><code class="lang-ruby">ary.pop    <span class="hljs-comment">#=&gt; "funny"</span>
+ary        <span class="hljs-comment">#=&gt; ["Nick", "is"]</span>
+ary &lt;&lt; <span class="hljs-number">28</span>  <span class="hljs-comment">#=&gt; ["Nick", "is", 28]</span>
+</code></pre>
+<p>Now we&#39;ve got an array with strings and a number as its elements. Pretty cool stuff. Now that we know some basic ways of adding and removing elements from an array let&#39;s talk about accessing those elements. If you want to access the first element of an array there is a really simple way of doing it: <code>first</code>! Try it out on the array <code>ary</code> we created. It should return the string &quot;Nick&quot;. Now take a wild guess as to how you&#39;d access the last element of an array... If you guess <code>last</code> you are correct. Try <code>ary.last</code> in IRB to see that you get the number <code>28</code>.</p>
+<p>Now <code>first</code> and <code>last</code> are great but they ignore everything in between. That is where indexing comes in. Each element of an array is assigned an index based on its position in the array. Indeces count up one at a time like normal counting. The important part to note is that the first index, that is the index representing the first element of the array, is 0. Let&#39;s create a new array in IRB and have a look at how indeces work:</p>
+<pre><code class="lang-ruby">people = [<span class="hljs-string">"Mike"</span>, <span class="hljs-string">"Nick"</span>, <span class="hljs-string">"Clay"</span>, <span class="hljs-string">"Osei"</span>]
+people.size    <span class="hljs-comment">#=&gt; 4</span>
+people.first   <span class="hljs-comment">#=&gt; "Mike"</span>
+people.last    <span class="hljs-comment">#=&gt; "Osei"</span>
+
+<span class="hljs-comment"># Now using an index...</span>
+people[<span class="hljs-number">0</span>]  <span class="hljs-comment">#=&gt; "Mike"</span>
+people[<span class="hljs-number">1</span>]  <span class="hljs-comment">#=&gt; "Nick"</span>
+people[<span class="hljs-number">3</span>]  <span class="hljs-comment">#=&gt; "Osei"</span>
+</code></pre>
+<p>When using an index to access elements from an array we start with 0 when counting from the beginning. This is why <code>people[1]</code> returns <code>&quot;Nick&quot;</code> and not <code>&quot;Mike&quot;</code>. Even though there are four elements in the array the last element is at index 3. Now that we understand how indeces work it should be noted that you can create ranges to access groups of elements in an array with the indeces as the boundaries of the range. Let&#39;s have a look at an example:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># Create a new array</span>
+people = [<span class="hljs-string">"Mike"</span>, <span class="hljs-string">"Nick"</span>, <span class="hljs-string">"Clay"</span>, <span class="hljs-string">"Osei"</span>, <span class="hljs-string">"Shehzan"</span>, <span class="hljs-string">"Gene"</span>, <span class="hljs-string">"Gilbert"</span>]
+
+<span class="hljs-comment"># Access the second and then the fifth element</span>
+people[<span class="hljs-number">1</span>]  <span class="hljs-comment">#=&gt; "Nick"</span>
+people[<span class="hljs-number">4</span>]  <span class="hljs-comment">#=&gt; "Shehzan"</span>
+
+<span class="hljs-comment"># Access the the second and fifth and everything between</span>
+people[<span class="hljs-number">1</span>..<span class="hljs-number">4</span>]  <span class="hljs-comment">#=&gt;  ["Nick", "Clay", "Osei", "Shehzan"]</span>
+</code></pre>
+<p>You&#39;ll see that the the range <code>1..4</code> accesses all of the elements from index 1 to index 4 <em>inclusive</em>. What makes it inclusive? The <code>..</code> tells the Ruby intepreter to include the index 4. If you used three dots like this: <code>1...4</code> this would <em>not</em> include the value at index 4. Play around a bit with this in IRB.</p>
+<hr>
+<h2 id="more-array-methods">More Array Methods</h2>
+<p>Let&#39;s have a look at a few more commonly used Array methods. A time may come where you are given an array of arrays that looks something like this: <code>[1, 2, [3, 4, [5]]]</code>. That is an array within an array within an array (insert Inception joke here). If you are concerned with only the values within these arrays and the actual structure here is getting in the way then Ruby has a solution for you!</p>
+<pre><code class="lang-ruby">nest = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]
+nest.flatten   <span class="hljs-comment">#=&gt; [1, 2, 3, 4, 5]</span>
+nest           <span class="hljs-comment">#=&gt; [1, 2, [3, 4, [5]]]</span>
+nest.flatten!  <span class="hljs-comment">#=&gt; [1, 2, 3, 4, 5]</span>
+nest           <span class="hljs-comment">#=&gt; [1, 2, 3, 4, 5]</span>
+</code></pre>
+<p>The <code>flatten</code> method basically smushes all of the arrays within arrays down into a single array and returns that new non-nested array. However, it only returns the new array. It does not change the original value. If you would like to mutate that original value in place and not have to assign it to a new variable you can use <code>flatten!</code>. The <code>!</code> at the end of the method name is common in Ruby. Other methods that have it are <code>map</code>, <code>upcase</code>, <code>downcase</code>, as well as a few others.</p>
+<p>I&#39;d like to talk about three more array methods before we move on to Ruby&#39;s other commonly used data structure. The three methods are: <code>shift</code>, <code>unshift</code>, and <code>+</code>. First I&#39;ll show you how they work and then explain the behavior.</p>
+<pre><code class="lang-ruby">b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]
+a = b.shift(<span class="hljs-number">5</span>)  <span class="hljs-comment">#=&gt; [1, 2, 3, 4, 5]</span>
+b               <span class="hljs-comment">#=&gt; [6, 7, 8, 9, 10]</span>
+c = a + b       <span class="hljs-comment">#=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+c.unshift(<span class="hljs-number">0</span>)    <span class="hljs-comment">#=&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+c               <span class="hljs-comment">#=&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</code></pre>
+<p>So, there&#39;s quite a lot going on here but it&#39;s really some pretty simple behavior. Let&#39;s start from the top. We create a new variable called <code>b</code> and assign it an array containing the numbers 1 through 10. On the second line we use the method <code>shift</code> with the argument <code>5</code> on the array in <code>b</code>. When you call <code>shift</code> with a number &#39;n&#39; it takes the first &#39;n&#39; elements from that array and returns them in a new array.</p>
+<p>It is important to note that it literally removes them from the original array much like <code>pop</code> takes the last element off of the array.</p>
+<p>So on line two we didn&#39;t just shift the elements out of the array; we also saved them to a new variable called <code>a</code>. You can see on line 3 that the first 5 elements are in fact missing from the original array. On line 4 we use the new <code>+</code> method to put the two arrays back together and save it in a new variable called <code>c</code>.</p>
+<p>Finally on line 5 we use the <code>unshift</code> method to add the element <code>0</code> to the <em>beginning</em> of the array. Earlier we saw how we can use <code>push</code> or <code>&lt;&lt;</code> to append to the end of an array. <code>unshift</code> allows you to <em>prepend</em> to an array.</p>
+<p>That&#39;s it <em>for now</em>.</p>
+<hr>
+<h2 id="hashes">Hashes</h2>
+<p>Hashes are similar to arrays except for all the ways that they are different. I kid, I kid. They are really pretty similar and many of the methods that work on arrays work similarly on hashes. Let&#39;s have a look at the basic structure of a hash that we&#39;ll call <code>person</code>.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># Create a new hash with some data already in it</span>
+person = { <span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">"Nick"</span>, <span class="hljs-symbol">:age</span> =&gt; <span class="hljs-number">28</span>, <span class="hljs-symbol">:city</span> =&gt; <span class="hljs-string">"Austin"</span> }
+
+<span class="hljs-comment"># Access the value at :city</span>
+person[<span class="hljs-symbol">:city</span>]  <span class="hljs-comment">#=&gt; "Austin"</span>
+
+<span class="hljs-comment"># How big is `person`?</span>
+person.size    <span class="hljs-comment">#=&gt; 3</span>
+</code></pre>
+<p>The last line <code>person.size</code> returned <code>3</code>. This may be confusing because that hash certainly looks bigger than 3. In fact I see 3 symbols used for keys and 3 strings or integers used for values. That balance, 3 keys and 3 values, always exists in a hash and it is why the size of the hash is 3. To describe the size of this hash we would say that it has 3 <em>key/value pairs</em>. Every key in a hash must have a value, even if it is <code>nil</code> or <code>false</code>, and a value cannot exist in a hash without a key for it to belong to.</p>
+<p>So what data types might we be able to use as keys and values in a hash? The answer is simple: literally anything. You can use a number as a key or value, you can use a string as a key or a value, you can even use data structures like arrays or hashes themselves as keys or values though it is probably not advisable to use an array or a hash as a key in a hash. Arrays are frequently used as values in hashes as are other hashes. It is pretty common to see a hash as a value in another hash too.</p>
+<h2 id="nested-hashes">Nested Hashes</h2>
+<p>The following is something we call a <em>nested</em> hash. It is a hash with some data type as a key, in this case a symbol, and then another hash as the value.</p>
+<pre><code class="lang-ruby">person = {
+  <span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">"Nick McDonnough"</span>,
+  <span class="hljs-symbol">:age</span> =&gt; <span class="hljs-number">28</span>,
+  <span class="hljs-symbol">:address</span> =&gt; {
+    <span class="hljs-symbol">:street</span> =&gt; <span class="hljs-string">"2520 Elmont St"</span>,
+    <span class="hljs-symbol">:city</span> =&gt; <span class="hljs-string">"Austin"</span>,
+    <span class="hljs-symbol">:state</span> =&gt; <span class="hljs-string">"TX"</span>
+  }
+}
+person[<span class="hljs-symbol">:name</span>]     <span class="hljs-comment">#=&gt; "Nick McDonnough"</span>
+person[<span class="hljs-symbol">:address</span>]  <span class="hljs-comment">#=&gt; {:street=&gt;"2520 Elmont St", :city=&gt;"Austin", :state=&gt;"TX"}</span>
+</code></pre>
+<p>Here we see that if you access the value of the <code>:address</code> key in our nested hash you get another hash back. If you&#39;d like to access a value in that returned hash you do it in the same way you would access a value in a regular hash. Try this out in IRB:</p>
+<pre><code class="lang-ruby">person[<span class="hljs-symbol">:address</span>][<span class="hljs-symbol">:city</span>]  <span class="hljs-comment">#=&gt; "Austin"</span>
+</code></pre>
+<p>If you typed everything correctly you should get back the string <code>&quot;Austin&quot;</code>. If this is a little confusing think about it this way: <code>person</code> is the large nested hash with keys <code>:name</code>, <code>:age</code>, and <code>:address</code>. If you call <code>[:address]</code> on <code>person</code> you get back a hash. So for all intents and purposes <code>person[:address]</code> is a representation of the value at the key <code>:address</code> which in this case is another hash. This means we can call <code>[:city]</code> on it to get the value in that nested hash.</p>
+<hr>
+<p>That&#39;s it for data types and data structures in Ruby. We&#39;ve covered a ton of information here so it&#39;s probably a good time to go back to The Checklist in the Ruby Prework Intro to see which questions you can check off. This lesson is not exhaustive but it should give you a good start on your Ruby studies. The next lesson is about iterators and higher order functions. If those terms confuse you they&#39;ll be explained in depth.</p>
+<p>Onward!</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./equality.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./numbers.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
