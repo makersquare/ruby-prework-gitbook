@@ -1,14 +1,16 @@
 CACHE MANIFEST
-# Revision 1400260044797
+# Revision 1400508970932
 
 CACHE:
-index.html
+hashes.html
 about-prework.html
 array-methods.html
 arrays.html
 basics.html
-case-expressions.html
+booleans.html
+case-statements.html
 class-constructor.html
+class-exercises.html
 class-variables.html
 classes.html
 comments.html
@@ -18,9 +20,11 @@ data-structures.html
 data-types-structures.html
 equality.html
 hash-methods.html
-hashes.html
-if-expressions.html
+index.html
+if-statements.html
+inheritance.html
 instance-variables.html
+lets-go-for-a-ride.html
 methods.html
 nested-hashes.html
 numbers.html
@@ -73,8 +77,8 @@ gitbook/jsrepl/sandbox.html
 gitbook/jsrepl/sandbox.js
 gitbook/print.css
 gitbook/style.css
-gitbook/plugins/gitbook-plugin-mathjax/plugin.js
 gitbook/plugins/gitbook-plugin-mixpanel/plugin.js
+gitbook/plugins/gitbook-plugin-mathjax/plugin.js
 
 NETWORK:
 *
